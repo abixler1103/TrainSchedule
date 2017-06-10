@@ -12,14 +12,14 @@
         <br>
         <!-- Jumbotron Title -->
         <div class="jumbotron">
-            <h1 class="text-center">When's my Train?</h1>
+            <h1 class="text-center" id="bigfont">When's my Train?</h1>
             <h3 class="text-center">Chugga Chugga Choo Choo</h3>
         </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
                     <!-- Default panel contents -->
-                    <div class="panel-heading">
+                    <div class="panel-heading" id="schHeading">
                         <h3 class="panel-title">Current Schedule</h3>
                     </div>
                     <table class="table" id="schedule">
@@ -33,6 +33,8 @@
                             </tr>
                         </thead>
                         <tbody>
+                        </tbody>
+                        <!--   <tbody>
                             <tr>
                                 <td id="trainName">Chicago Bound</td>
                                 <td id="destination">Chicago</td>
@@ -40,7 +42,7 @@
                                 <td id="nextArrival">10:00 PM</td>
                                 <td id="minAway">10</td>
                             </tr>
-                        </tbody>
+                        </tbody> -->
                     </table>
                 </div>
             </div>
@@ -48,7 +50,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" id="addHeading">
                         <h3 class="panel-title">Add Train</h3>
                     </div>
                     <div class="panel-body">
@@ -76,10 +78,12 @@
             </div>
         </div>
     </div>
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-<script src="assets/train.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="assets/train2.js"></script>
 
 </html>

@@ -42,28 +42,21 @@
     // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
     dataRef.ref().on("child_added", function(childSnapshot) {
 
-            // Log everything that's coming out of snapshot
-            console.log(childSnapshot.val().name);
-            console.log(childSnapshot.val().destination);
-            console.log(childSnapshot.val().firstTrain);
-            console.log(childSnapshot.val().frequency);
-            // console.log(childSnapshot.val().joinDate);
+        // Log everything that's coming out of snapshot
+        console.log(childSnapshot.val().name);
+        console.log(childSnapshot.val().destination);
+        console.log(childSnapshot.val().firstTrain);
+        console.log(childSnapshot.val().frequency);
+        // console.log(childSnapshot.val().joinDate);
 
-            // full list of items to the well
-            $("#trainName").append("<span id='name'> " + childSnapshot.val().name +
-                " </span>");
 
-            $("#destination").append("<span id = 'destination' > " + childSnapshot.val().destination +
-                " </span>");
+    });
 
-            $("#frequency").append("<span id='frequency'> " + childSnapshot.val().frequency +
-                " </span>");
+    //Handle the errors
 
-            // Handle the errors
-        },
-        function(errorObject) {
-            console.log("Errors handled: " + errorObject.code);
-        });
+    function(errorObject) {
+        console.log("Errors handled: " + errorObject.code);
+    }
 
     dataRef.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
 
